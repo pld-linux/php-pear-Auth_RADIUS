@@ -27,6 +27,10 @@ are using MS-CHAP you need also the mhash extension.
 This class has in PEAR status: %{_status}.
 
 %description -l pl
+Ten pakiet udostêpnia klasy obudowuj±ce RADIUS PECL. S± ró¿ne klasy
+dla ró¿nych metod uwierzytelniania. Do u¿ywania CHAP-MD5 lub MS-CHAP
+potrzebny jest tak¿e pakiet Crypt_CHAP. Do MS-CHAP potrzebne jest
+dodatkowo rozszerzenie mhash.
 
 Ta klasa ma w PEAR status: %{_status}.
 
