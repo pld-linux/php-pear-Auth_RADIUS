@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - Wrapper Classes for the RADIUS PECL
 Summary(pl):	%{_pearname} - Wrapper dla klasy RADIUS PECL
 Name:		php-pear-%{_pearname}
-Version:	1.0.3
+Version:	1.0.4
 Release:	1
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	e3760a51910e3ff5238e688da78f4126
+# Source0-md5:	1463850d06db8ed70a0aa2fadd6be0e5
 URL:		http://pear.php.net/package/Auth_RADIUS/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
