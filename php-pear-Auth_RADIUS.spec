@@ -26,7 +26,7 @@ different Classes for the different authentication methods. If you are
 using CHAP-MD5 or MS-CHAP you need also the Crypt_CHAP package. If you
 are using MS-CHAP you need also the mhash extension.
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 Ten pakiet udostêpnia klasy obudowuj±ce RADIUS PECL. S± ró¿ne klasy
