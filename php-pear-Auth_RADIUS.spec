@@ -1,0 +1,48 @@
+%include	/usr/lib/rpm/macros.php
+%define		_class		Auth
+%define		_subclass	RADIUS
+%define		_status		stable
+%define		_pearname	%{_class}_%{_subclass}
+Summary:	%{_pearname} - Wrapper Classes for the RADIUS PECL
+Summary(pl):	%{_pearname} - Wrapper dla klasy RADIUS PECL
+Name:		php-pear-%{_pearname}
+Version:	1.0
+Release:	1
+License:	BSD
+Group:		Development/Languages/PHP
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+URL:		http://pear.php.net/
+BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+Requires:	php-pear
+Requires:	php-pecl-radius
+BuildArch:	noarch
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%description
+This package provides wrapper-classes for the RADIUS PECL. There are
+different Classes for the different authentication methods. If you are
+using CHAP-MD5 or MS-CHAP you need also the Crypt_CHAP package. If you
+are using MS-CHAP you need also the mhash extension.
+
+This class has in PEAR status: %{_status}.
+
+%description -l pl
+
+Ta klasa ma w PEAR status: %{_status}.
+
+%prep
+%setup -q -c
+
+%install
+rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/
+
+install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%doc %{_pearname}-%{version}/examples/*
+%{php_pear_dir}/%{_class}/*.php
