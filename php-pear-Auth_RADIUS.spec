@@ -6,11 +6,11 @@
 Summary:	%{_pearname} - Wrapper Classes for the RADIUS PECL
 Summary(pl):	%{_pearname} - Wrapper dla klasy RADIUS PECL
 Name:		php-pear-%{_pearname}
-Version:	1.0
+Version:	1.0.1
 Release:	1
 License:	BSD
 Group:		Development/Languages/PHP
-# Source0-md5:	3617a1e921a3a71a7706b4ba271cff0f
+# Source0-md5:	290af15238c72245447916fe279beb3a
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://pear.php.net/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
