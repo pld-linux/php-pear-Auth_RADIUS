@@ -1,5 +1,4 @@
 %include	/usr/lib/rpm/macros.php
-%include	/usr/lib/rpm/macros.pear
 %define		_class		Auth
 %define		_subclass	RADIUS
 %define		_status		stable
@@ -9,13 +8,13 @@ Summary:	%{_pearname} - Wrapper Classes for the RADIUS PECL
 Summary(pl):	%{_pearname} - Wrapper dla klasy RADIUS PECL
 Name:		php-pear-%{_pearname}
 Version:	1.0.4
-Release:	2.1
+Release:	2
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	1463850d06db8ed70a0aa2fadd6be0e5
 URL:		http://pear.php.net/package/Auth_RADIUS/
-BuildRequires:	php-pear-build
+BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
 Requires:	php-pecl-radius >= 1.2
 BuildArch:	noarch
@@ -38,19 +37,18 @@ dodatkowo rozszerzenie mhash.
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
-%pear_package_setup
+%setup -q -c
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}
-%pear_package_install
+install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/
+
+install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc install.log
-%doc docs/%{_pearname}/examples/*
-%{php_pear_dir}/.registry/*.reg
+%doc %{_pearname}-%{version}/examples/*
 %{php_pear_dir}/%{_class}/*.php
