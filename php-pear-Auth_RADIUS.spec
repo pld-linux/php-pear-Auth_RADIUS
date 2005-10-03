@@ -16,8 +16,9 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://pear.php.net/package/Auth_RADIUS/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
-Requires:	php-pecl-radius >= 1.2
 BuildArch:	noarch
+Requires:	php-pear-radius >= 1.2.4
+Requires:	php-pecl-radius >= 1.2.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
