@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - Wrapper Classes for the RADIUS PECL
-Summary(pl):	%{_pearname} - Wrapper dla klasy RADIUS PECL
+Summary(pl.UTF-8):   %{_pearname} - Wrapper dla klasy RADIUS PECL
 Name:		php-pear-%{_pearname}
 Version:	1.0.5
 Release:	1
@@ -30,10 +30,10 @@ are using MS-CHAP you need also the mhash extension.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Ten pakiet udostêpnia klasy obudowuj±ce RADIUS PECL. S± ró¿ne klasy
-dla ró¿nych metod uwierzytelniania. Do u¿ywania CHAP-MD5 lub MS-CHAP
-potrzebny jest tak¿e pakiet Crypt_CHAP. Do MS-CHAP potrzebne jest
+%description -l pl.UTF-8
+Ten pakiet udostÄ™pnia klasy obudowujÄ…ce RADIUS PECL. SÄ… rÃ³Å¼ne klasy
+dla rÃ³Å¼nych metod uwierzytelniania. Do uÅ¼ywania CHAP-MD5 lub MS-CHAP
+potrzebny jest takÅ¼e pakiet Crypt_CHAP. Do MS-CHAP potrzebne jest
 dodatkowo rozszerzenie mhash.
 
 Ta klasa ma w PEAR status: %{_status}.
